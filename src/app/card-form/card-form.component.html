@@ -1,8 +1,13 @@
-<form [formGroup]="cardForm" >
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
     <app-input label="Name" [control]="cardForm.get('name')"></app-input>
     <app-input label="Card Number" [control]="cardForm.get('cardNumber')"></app-input>
     <app-input label="Expiration Date" [control]="cardForm.get('expiration')"></app-input>
     <app-input label="Security Code" [control]="cardForm.get('securityCode')"></app-input>
+    <button 
+        type="submit" 
+        [disabled]="cardForm.invalid"
+        class="button is-primary"
+        >Submit</button>
 </form>
 
 <div>
