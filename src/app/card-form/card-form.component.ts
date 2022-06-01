@@ -13,7 +13,10 @@ export class CardFormComponent implements OnInit {
     ])
   })
 
-  constructor() { }
+  constructor() {
+    console.log(this.cardForm.get('name'));
+    
+   }
 
   ngOnInit(): void {
   }
